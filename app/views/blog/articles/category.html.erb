@@ -1,0 +1,11 @@
+<ul>
+	<% @result.each do |item| %>
+		<%for i in 1..item['depth'] do%>
+			<ul>
+		<%end%>
+			<li><%=item['name']%></li>
+		<%for i in 1..item['depth'] do%>
+			</ul>
+		<%end%>
+	<% end %>
+</ul>
