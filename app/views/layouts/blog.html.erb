@@ -14,7 +14,6 @@
 
 	<!-- CSS LIBRARY -->
     <%= stylesheet_link_tag    "bootstrap.min", media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    "font-awesome.min", media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    "awe-booking-font", media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    "owl.carousel", media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    "jquery-ui", media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -49,7 +48,7 @@
                 <div class="container">
                     <!-- LOGO -->
                     <div class="logo">
-                        <a href="index.html"><img src="assets/logo.png" alt=""></a>
+                        <a href="index.html"><img src="<%= asset_path("logo.png") %>" alt=""></a>
                     </div>
                     <!-- END / LOGO -->
                     
