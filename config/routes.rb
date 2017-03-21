@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   constraints subdomain: 'sub' do
   	get 'sub', to: 'sub#index'
   end
+  root :to => 'blog/articles#index'
 end
