@@ -1,0 +1,42 @@
+<% @articles.each do |article| %>
+<div class="post">
+    <div class="post-media">
+        <div class="image-wrap">
+            <a href="<%= article.permalink%>">
+                <img src="images/img/1.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="post-body">
+        <div class="post-meta">
+            <div class="date"><%= article.published_at%></div>
+            <div class="author">by <a href="#"><%= article.author%></a></div>
+            <div class="cat">
+                <ul>
+                    <li>
+                        <% article.categories.each do |cat| %>
+                            <a href="#"><%=cat.name%></a>
+                        <% end %>
+                    </li>
+                </ul>
+            </div>
+            <div class="comment"><a href="#">8 Comments &raquo;</a></div>
+        </div>
+        <div class="post-title">
+            <h2>
+                <a href="single-post.html"><%=article.title%></a>
+            </h2>
+        </div>
+        <div class="post-content">
+            <p><%=article.body %> […]</p>
+        </div>
+        <div class="post-link">
+            <a href="single-post.html" class="awe-btn awe-btn-style2">Read more</a>
+        </div>
+    </div>
+</div>
+<% end %>
+
+<!-- PAGINATION -->                    
+<%= paginate @articles, remote: true, theme: 'blog_articles_paging' %>
+<!-- END / PAGINATION -->

@@ -53,4 +53,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "config"
 gem "font-awesome-rails"
+gem 'kaminari'
+#gem 'responders'
 ruby '2.3.1'

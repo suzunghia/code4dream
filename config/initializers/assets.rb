@@ -23,4 +23,5 @@ Rails.application.config.assets.precompile += %w(
  theia-sticky-sidebar.js
  jquery-ui.js
  scripts.js
+ index.js
 )
