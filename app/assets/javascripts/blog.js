@@ -11,6 +11,10 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+//= require masonry.pkgd.min
+//= require jquery.parallax-1.1.3
+//= require jquery.owl.carousel
+//= require theia-sticky-sidebar
+//= require jquery-ui
 //= require turbolinks
 //= require_tree .

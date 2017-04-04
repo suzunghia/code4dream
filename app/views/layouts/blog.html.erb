@@ -8,9 +8,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!-- GOOGLE FONT -->
-    <link href='fonts.googleapis.com/css?family=Open+Sans:700,600,400,300' rel='stylesheet' type ='text/css'>
-    <link href='fonts.googleapis.com/css?family=Oswald:400' rel='stylesheet' type='text/css'>
-    <link href='fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:700,600,400,300' rel='stylesheet' type ='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Oswald:400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
 	<!-- CSS LIBRARY -->
     <%= stylesheet_link_tag    "bootstrap.min", media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -23,17 +23,16 @@
 
 	<!-- CSS COLOR -->
 	<%= stylesheet_link_tag    "blue", media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <!-- IMAGE BACKGROUND -->
+    <%= stylesheet_link_tag    "image", media: 'all', 'data-turbolinks-track': 'reload' %>
     
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!-- LOAD JQUERY -->
-    <%= javascript_include_tag 'masonry.pkgd.min', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'jquery.parallax-1.1.3', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'jquery.owl.carousel', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'theia-sticky-sidebar', 'data-turbolinks-track': 'reload' %>
+    <!-- JS -->
+    <%= javascript_include_tag 'blog', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <!--[if IE 7]> <body class="ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
@@ -249,7 +248,7 @@
                                 </div>
                             </div>
                             <div class="logo">
-                                <img src="images/logo-footer.png" alt="">
+                                <!-- <img src="images/logo-footer.png" alt=""> -->
                             </div>
                             <div class="widget_content">
                                 <p>25 California Avenue, Santa Monica, California. USA</p>

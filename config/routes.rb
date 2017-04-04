@@ -2,12 +2,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   constraints subdomain: 'blog' do
-  	resources :articles, module: 'blog'
+    resources :articles, module: 'blog', param: :permalink
     concern :paginatable do
       get '(page/:page)', action: :index, on: :collection, as: ''
     end
-    resources :home, module: 'blog', concerns: :paginatable
-  	root :to => 'blog/home#index' 
+    resources :home, module: 'blog', path: '/',  concerns: :paginatable
   	get 'category', to: 'blog/articles#category'
   end
   root :to => 'blog/home#index'

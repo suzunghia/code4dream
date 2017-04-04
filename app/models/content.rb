@@ -9,4 +9,6 @@ class Content < ApplicationRecord
 	scope :tags, -> {includes (:tags)}
 	scope :author, -> {includes (:user)}
 	scope :param, -> (param) { if param.present? then articles.where("param > ?", param) else articles end}
+
+	scope :permalink, -> (param) {where permalink: param}
 end

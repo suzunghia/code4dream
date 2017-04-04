@@ -10,13 +10,14 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 Rails.application.config.assets.precompile += %w(
  style.css.scss
+ image.css.scss
  blue.css
  bootstrap.min.css
  font-awesome.min.css
  awe-booking-font.css
  owl.carousel.css
+ blog.js
  jquery-ui.css
- jquery-1.11.2.min.js
  masonry.pkgd.min.js
  jquery.parallax-1.1.3.js
  jquery.owl.carousel.js

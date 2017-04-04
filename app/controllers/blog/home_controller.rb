@@ -9,6 +9,6 @@ class Blog::HomeController < ApplicationController
 
 	private 
 	def GetArticles
-		@articles = Content.param(nil).published.categories.tags.page(params[:page]).per(2)
+		@articles = Content.articles.published.categories.tags.page(params[:page]).per(2)
 	end
 end

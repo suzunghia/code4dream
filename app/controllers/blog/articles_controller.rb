@@ -3,7 +3,11 @@ class Blog::ArticlesController < ApplicationController
 	layout "blog"
 	
 	def index
-		@articles = Content.where(content_type: Settings.article_type)
+		@articles = Content.articles.published.permalink(params[:id]).categories.tags
+	end
+
+	def show
+		@articles = Content.articles.published.permalink(params[:permalink]).categories.tags
 	end
 
 	def category
