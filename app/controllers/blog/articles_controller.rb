@@ -7,7 +7,7 @@ class Blog::ArticlesController < ApplicationController
 	end
 
 	def show
-		@articles = Content.articles.published.permalink(params[:permalink]).categories.tags
+		@article = Content.articles.published.permalink(params[:permalink]).categories.tags.first
 	end
 
 	def category

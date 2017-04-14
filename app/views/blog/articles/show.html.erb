@@ -1,5 +1,285 @@
-<div style="width: 100%, height: 100%">
-<% @articles.each do |article| %>
-	<h2><%=article.title%></h2>
-	<h6><%=article.body%></h6>
-<% end %>
+<section class="blog-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="blog-page__content blog-single">
+                            <!-- POST -->
+                            <div class="post">
+                                <div class="post-meta">
+                                    <div class="date">February 26th, 2015</div>
+                                    <div class="author">by <a href="#">Nomadic Matt</a></div>
+                                    <div class="cat">
+                                        <ul>
+                                            <li><a href="#">Travel Gear</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="comment"><a href="#">8 Comments »</a></div>
+                                </div>
+                                <div class="post-title">
+                                    <h1><%=@article.title%></h1>
+                                </div>
+                                <div class="post-media">
+                                    <!-- <div class="image-wrap">
+                                        <img src="images/img/2.jpg" alt="">
+                                    </div> -->
+                                </div>
+                                <div class="post-body">
+                                    <div class="post-content">
+                                        <%=@article.body.html_safe%>
+                                    </div>
+                                </div>
+                                <div class="post-footer">
+                                    <div class="share-box">
+                                        <h4>Share</h4>
+                                        <div class="share">
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                                <span class="count">2</span>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa fa-pinterest"></i>
+                                                <span class="count">43</span>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                                <span class="count">124</span>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa fa-google-plus"></i>
+                                                <span class="count">1.8k</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="tag-box">
+                                        <h4>Tag</h4>
+                                        <div class="tag">
+                                            <a href="#">Hotel</a>
+                                            <a href="#">Motel</a>
+                                            <a href="#">Hostel</a>
+                                            <a href="#">Homestay</a>
+                                        </div>
+                                    </div>
+                                    <div class="cat-box">
+                                        <h4>Category</h4>
+                                        <div class="cat">
+                                            <a href="#">Hotel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END / POST -->
+
+                            <!-- ABOUT AUTHOR -->
+                            <div class="about-author">
+                                <div class="image-thumb fl">
+                                    <div class="image-cover">
+                                        <img src="images/img/1.jpg" alt="" style="height: 100%; width: auto;">
+                                    </div>
+                                </div>
+                                <div class="author-info">
+                                    <div class="author-title">
+                                        <h4>About author</h4>
+                                    </div>
+                                    <div class="author-name">
+                                        <h3>Name of author</h3>
+                                    </div>
+                                    <div class="author-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet nulla sed venenatis vulputate. Nulla venenatis mi sed fermentum laoreet.</p>
+                                    </div>
+                                    <div class="author-social">
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-pinterest"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END / ABOUT AUTHOR -->
+
+                            <!-- RELATED POSTS -->
+                            <div class="related-post">
+                                <h4>Related posts</h4>
+                                <div class="related-slider owl-carousel owl-theme" style="opacity: 1; display: block;">
+                                    <div class="owl-wrapper-outer autoHeight" style="height: 181px;"><div class="owl-wrapper" style="width: 3392px; left: 0px; display: block; transition: all 1000ms ease; transform: translate3d(0px, 0px, 0px);"><div class="owl-item" style="width: 848px;"><div class="post">
+                                        <div class="post-media">
+                                            <div class="image-wrap image-style">
+                                                <a href="single-post.html">
+                                                    <img src="images/img/3.jpg" alt="" style="height: 100%; width: auto;">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="post-body">
+                                            <div class="post-meta">
+                                                <div class="date">February 26th, 2015</div>
+                                                <div class="author">by <a href="#">Nomadic Matt</a></div>
+                                                <div class="cat">
+                                                    <ul>
+                                                        <li><a href="#">Travel Gear</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="comment"><a href="#">8 Comments »</a></div>
+                                            </div>
+                                            <div class="post-title">
+                                                <h2>
+                                                    <a href="single-post.html">My 2015 Group Tours: Two Trips to Europe!</a>
+                                                </h2>
+                                            </div>
+                                            <div class="post-content">
+                                                <p>This year I’ll be offering two short tours in the fall: one to Paris and Amsterdam and one to Prague and […]</p>
+                                            </div>
+                                            <div class="post-link">
+                                                <a href="single-post.html" class="awe-btn awe-btn-style2">Read more</a>
+                                            </div>
+                                        </div>
+                                    </div></div><div class="owl-item" style="width: 848px;"><div class="post">
+                                        <div class="post-media">
+                                            <div class="image-wrap image-style">
+                                                <a href="single-post.html">
+                                                    <img src="images/img/4.jpg" alt="" style="height: 100%; width: auto;">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="post-body">
+                                            <div class="post-meta">
+                                                <div class="date">February 26th, 2015</div>
+                                                <div class="author">by <a href="#">Nomadic Matt</a></div>
+                                                <div class="cat">
+                                                    <ul>
+                                                        <li><a href="#">Travel Gear</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="comment"><a href="#">8 Comments »</a></div>
+                                            </div>
+                                            <div class="post-title">
+                                                <h2>
+                                                    <a href="single-post.html">My 2015 Group Tours: Two Trips to Europe!</a>
+                                                </h2>
+                                            </div>
+                                            <div class="post-content">
+                                                <p>This year I’ll be offering two short tours in the fall: one to Paris and Amsterdam and one to Prague and […]</p>
+                                            </div>
+                                            <div class="post-link">
+                                                <a href="single-post.html" class="awe-btn awe-btn-style2">Read more</a>
+                                            </div>
+                                        </div>
+                                    </div></div></div></div>
+                                    
+                                <div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev"><i class="fa fa-caret-left"></i></div><div class="owl-next"><i class="fa fa-caret-right"></i></div></div></div></div>
+                            </div>
+                            <!-- END / RELATED POSTS -->
+
+                            <!-- COMMENTS -->
+                            <div id="comments">
+                                <!-- LEAVER YOUR COMMENT -->
+                                <div id="respond">
+                                    <div class="reply-title">
+                                        <h4>3 Comments</h4>
+                                    </div>
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-item form-textarea-wrapper">
+                                                    <textarea>Comment here</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-item form-name">
+                                                    <input type="text" value="Your name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-item form-email">
+                                                    <input type="text" value="Your email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-actions">
+                                                    <input type="submit" value="Post Comment">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- END / LEAVER YOUR COMMENT -->
+
+                                <div class="commentlist-wrapper">
+                                    <ul class="commentlist">
+                                        <li class="comment">
+                                            <div class="comment-box">
+                                                <div class="comment-author">
+                                                    <a href="#"><img src="images/img/demo-thumb.jpg" alt=""></a>
+                                                </div>
+                                                <div class="comment-body">
+                                                    <cite class="fn"><a href="#">Gofar</a></cite>
+                                                    <p>Mauris tincidunt, quam at feugiat efficitur, justo nunc efficitur justo, a hendrerit lectus neque eu nibh. Praesent eu sem erat. Fusce non sagittis lorem.</p>
+                                                    <div class="comment-meta">
+                                                        <span>5 days ago</span>
+                                                    </div>
+                                                    <div class="comment-abs">
+                                                        <a href="#" class="comment-edit-link">Edit</a> // 
+                                                        <a href="#" class="comment-reply-link">Reply</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="children">
+                                                <li class="comment bypostauthor">
+                                                    <div class="comment-box">
+                                                        <div class="comment-author">
+                                                            <a href="#"><img src="images/img/demo-thumb.jpg" alt=""></a>
+                                                        </div>
+                                                        <div class="comment-body">
+                                                            <cite class="fn">
+                                                                <a href="#">Gofar</a>
+                                                                <span class="byauthor">Author</span>
+                                                            </cite>
+                                                            <p>Aliquam volutpat elit non urna faucibus condimentum. Pellentesque nibh libero, consequat at nibh a, tincidunt rutrum magna. Curabitur in posuere risus, dictum euismod dolor. Vestibulum auctor orci sed elit ultricies tempus. Praesent facilisis tellus turpis, ac congue lorem consectetur ac.</p>
+                                                            <div class="comment-meta">
+                                                                <span>5 days ago</span>
+                                                            </div>
+                                                            <div class="comment-abs">
+                                                                <a href="#" class="comment-edit-link">Edit</a> // 
+                                                                <a href="#" class="comment-reply-link">Reply</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="comment">
+                                            <div class="comment-box">
+                                                <div class="comment-author">
+                                                    <a href="#"><img src="images/img/demo-thumb.jpg" alt=""></a>
+                                                </div>
+                                                <div class="comment-body">
+                                                    <cite class="fn"><a href="#">Gofar</a></cite>
+                                                    <p>Pellentesque nibh libero, consequat at nibh a, tincidunt rutrum magna. Curabitur in posuere risus, dictum euismod dolor. Vestibulum auctor orci sed elit ultricies tempus. Praesent facilisis tellus turpis, ac congue lorem consectetur ac.</p>
+                                                    <div class="comment-meta">
+                                                        <span>5 days ago</span>
+                                                    </div>
+                                                    <div class="comment-abs">
+                                                        <a href="#" class="comment-edit-link">Edit</a> // 
+                                                        <a href="#" class="comment-reply-link">Reply</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- END / COMMENTS -->
+                        </div>
+                    </div>
+                    <%= render "blog/right_menu_side" %>
+                    </div>
+                </div>
+            </div>
+        </section>
