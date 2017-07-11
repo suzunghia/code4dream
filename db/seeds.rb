@@ -1,6 +1,3 @@
-Content::HABTM_Categories.create!([
-  {content_id: 1, category_id: 1}
-])
 Category.create!([
   {name: "root-cat", display_name: nil, lft: 1, rgt: 22},
   {name: "sub-cat-1", display_name: nil, lft: 2, rgt: 7},
