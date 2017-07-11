@@ -3,11 +3,11 @@ class Blog::ArticlesController < ApplicationController
 	layout "blog"
 	
 	def index
-		@articles = Content.articles.published.permalink(params[:id]).categories.tags
+		@articles = Content.articles.permalink(params[:id]).categories.tags
 	end
 
 	def show
-		@article = Content.articles.published.permalink(params[:permalink]).categories.tags.first
+		@article = Content.articles.permalink(params[:permalink]).categories.tags.first
 	end
 
 	def category

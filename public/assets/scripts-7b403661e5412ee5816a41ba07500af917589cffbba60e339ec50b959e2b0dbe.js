@@ -682,3 +682,9 @@
 
     });
 })(jQuery);
+
+$(document).on('turbolinks:load', function() {
+
+    $('.preloader').fadeOut(1200);
+
+});

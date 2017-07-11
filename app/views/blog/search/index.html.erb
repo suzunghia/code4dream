@@ -1,5 +1,13 @@
-<h1> search </h1>
-<%=@results.size %>
-<% @results.each do |item| %>
-	<h1><%=item.title %></h1>
-<% end %>
+<section>
+    <div class="container">
+        <div class="row">
+        	<div class="col">
+	        	<div class="blog-page__content">
+		        	<div id="articles">
+		                <%= render 'blog/home/paging_articles' %>
+		            </div>
+	            </div>
+            </div>
+        </div>
+    </div>
+</section>

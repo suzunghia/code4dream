@@ -29,8 +29,8 @@
                                     <li><a href="trip-dark.html"><%= t :hue %></a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item-has-children">
-                                <a href="<%=root_url(:subdomain => "blog")%>"><%= t :blog %></a>
+                            <li class="menu-item-has-children <%= active_class('') %>">
+                                <a href="/"><%= t :blog %></a>
                                 <ul class="sub-menu">
                                     <li class="menu-item-has-children">
                                         <a href="#"><%= t :travel_exp %></a>
@@ -43,7 +43,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="<%= active_class(contact_path) %>">
+                            <li>
                                 <a href="<%=contact_url(:subdomain => false)%>"><%= t :contact %></a>
                             </li>
                         </ul>

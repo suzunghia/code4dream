@@ -2,6 +2,6 @@ class Blog::SearchController < ApplicationController
 	layout "blog"
 
 	def index
-		@results = Content.search(params[:q])
+		@articles = Content.search_with(params).page(params[:page]).per(10)
 	end
 end

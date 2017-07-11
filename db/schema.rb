@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170414035145) do
+ActiveRecord::Schema.define(version: 20170711061118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "unaccent"
 
   create_table "articles_categories", id: false, force: :cascade do |t|
     t.integer "content_id"
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(version: 20170414035145) do
     t.string   "permalink"
     t.string   "state"
     t.datetime "published_at"
+    t.text     "body_seo"
   end
 
   create_table "pg_search_documents", force: :cascade do |t|

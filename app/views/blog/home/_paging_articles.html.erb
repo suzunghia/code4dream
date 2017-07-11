@@ -2,8 +2,8 @@
 <div class="post">
     <div class="post-media">
         <div class="image-wrap">
-            <a href="<%= article.permalink%>">
-                <!-- <img src="images/img/1.jpg" alt=""> -->
+            <a href="<%='articles/' + article.permalink %>">
+                <img src="/img/1.jpg" alt="">
             </a>
         </div>
     </div>
@@ -28,7 +28,11 @@
             </h2>
         </div>
         <div class="post-content">
-            <p><%=article.body %> […]</p>
+            <% length = article.body.index('</p>') != nil ? article.body.index('</p>') + 4 : 50 %>
+            <!-- <p><%#=highlight(article.body.slice(0..length), params[:q]) %>[…]</p> -->
+            <p><%#=raw(article.highlight.present? ? article.highlight : article.body.slice(0..length)) %>
+                <%=article.body.slice(0..length)%>
+            </p>
         </div>
         <div class="post-link">
             <a href="<%='articles/' + article.permalink %>" class="awe-btn awe-btn-style2">Read more</a>
