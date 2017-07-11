@@ -57,4 +57,5 @@ gem "config"
 gem "font-awesome-rails"
 gem 'kaminari'
 #gem 'responders'
+gem 'seed_dump'
 ruby '2.3.1'
